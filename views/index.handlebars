@@ -1,1 +1,53 @@
-<h1>HELLOWORLDS</h1>
+<div class="content">
+
+  <h1 class="pageHead">Eat the Burger</h1>
+  <div class="burgerSection">
+
+    <ul class="burgerList">
+      {{#each burgers}}
+      {{#unless devoured}}
+      <div class="burgerItem">
+        <span>{{burger_name}}</span>
+      </div>
+      <br>
+      {{/unless}}
+      {{/each}}
+    </ul>
+
+    <ul class="burgerList">
+      {{#each burgers}}
+      {{#unless devoured}}
+      <button class="devourButton" value = {{id}}>
+        Devour!!
+      </button>
+      <br>
+      {{/unless}}
+      {{/each}}
+    </ul>
+
+    <ul class="burgerList">
+      {{#each burgers}}
+      {{#if devoured}}
+      <div class="burgerItem devoured">
+        <span>{{burger_name}}</span>
+      </div>
+      <br>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+
+
+  <h2>New Burger</h2>
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="ca">Burger Name:</label>
+      <input type="text" id="ca" name="name">
+    </div>
+
+
+
+    <button type="submit">Add Burger</button>
+  </form>
+</div>
