@@ -1,20 +1,25 @@
-<div class="content">
+<div class="container mx-auto">
 
-  <h1 class="pageHead">Eat the Burger</h1>
+  <h1 class="display-1">Eat the Burger</h1>
   <div class="burgerSection">
 
     <ul class="burgerList">
       {{#each burgers}}
       {{#unless devoured}}
-      <div class="burgerItem">
-        <span>{{burger_name}}</span>
-      </div>
-      <br>
+        <div>
+            <div class="burgerItem">
+                <span>{{burger_name}}</span>
+            </div>
+            <button class="devourButton" value = {{burger_id}}>
+                Devour!!
+            </button>
+            <br>
+        </div>
       {{/unless}}
       {{/each}}
     </ul>
 
-    <ul class="burgerList">
+    {{!-- <ul class="burgerList">
       {{#each burgers}}
       {{#unless devoured}}
       <button class="devourButton" value = {{id}}>
@@ -23,7 +28,7 @@
       <br>
       {{/unless}}
       {{/each}}
-    </ul>
+    </ul> --}}
 
     <ul class="burgerList">
       {{#each burgers}}
